@@ -5,6 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -28,6 +31,12 @@ function TempleteExample(templete, id) {
         }
     };
 }
+function Log2(target, name, des) {
+    console.log("accessor");
+    console.log(target);
+    console.log(name);
+    console.log(des);
+}
 var DataStorage = /** @class */ (function () {
     function DataStorage(items) {
         this.items = items;
@@ -43,7 +52,8 @@ var DataStorage = /** @class */ (function () {
     };
     DataStorage = __decorate([
         Logging('value logging'),
-        TempleteExample('<h1>data hi ddd ddd</h1>', 'app')
+        TempleteExample('<h1>data hi ddd ddd</h1>', 'app'),
+        __param(0, Log2)
     ], DataStorage);
     return DataStorage;
 }());

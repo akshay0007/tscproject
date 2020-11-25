@@ -26,6 +26,11 @@ lib-->specif lib to include
 ===========================
 important configuration--
 
+"outFile": "./dist/bundle.js"--->combine all files in single
+
+moduel:'es2015'-->for importing behaviour and outFile:needs to comments
+
+
  "outDir": "./dist",                        /* Redirect output structure to the directory. */
 "rootDir": "./src",  
 
@@ -37,3 +42,10 @@ important configuration--
 for dubugging in vs code---
 go to lauch.json -->inside .vscode==>and change port to 3000
 then run -->start debugging
+
+
+
+-----------------
+web pack setup for optimize code reduce more js files
+npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
+web pack take care of rootDir u can comment this

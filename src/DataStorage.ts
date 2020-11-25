@@ -26,7 +26,7 @@ function Log2(target:any,name:string,des:PropertyDescriptor){
 @Logging('value logging')
 @TempleteExample('<h1>data hi ddd ddd</h1>', 'app')
 class DataStorage<T>{
-    constructor(@Log2 private items: T[]) { }
+    constructor(private items: T[]) { }
 
     addItems(item: T) {
         this.items.push(item);
