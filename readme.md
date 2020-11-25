@@ -54,3 +54,6 @@ web pack take care of rootDir u can comment this
 prod work flow
 npm install --save-dev clean-webpack-plugin -->for prod saving data frequently dist folder or memory
 
+
+//js library
+class-validator library
